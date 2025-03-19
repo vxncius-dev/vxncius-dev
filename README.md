@@ -7,9 +7,16 @@ Welcome to my GitHub! I'm a full stack developer focused on building scalable an
 ### Frontend  
 - HTML, CSS, JavaScript, TypeScript, jQuery  
 - Tailwind, Bootstrap, Sass  
-- Angular, React Native, Flutter  
+- React, Next.js, Vue.js  
 - Three.js (3D graphics)  
 - Figma, Photoshop (UI/UX)  
+
+### Mobile Development  
+- React Native, Flutter, Kotlin, NativeScript, Expo, Lynx, Ionic
+
+### Database & SQL
+- SQL, MySQL, PostgreSQL, SQLite
+- Dart (for database-related tasks in Flutter apps)
 
 ### Backend  
 - PHP, Python, Node.js  
@@ -19,7 +26,7 @@ Welcome to my GitHub! I'm a full stack developer focused on building scalable an
 - Bash, PowerShell  
 - R (Data Science)
 
-### Hardware & IoT
+### Hardware & IoT  
 - Arduino (Microcontrollers, Sensors, Automation)
 
 ### Exploring  
@@ -29,4 +36,4 @@ Welcome to my GitHub! I'm a full stack developer focused on building scalable an
 
 1. **[AudioVision](https://github.com/vxncius-dev/audiovision)** - A web application that helps individuals with hearing impairments by transcribing and analyzing audio files, converting them into text and visual waveforms.  
 
-2. **[TerminalAesthetics](https://github.com/vxncius-dev/terminalaesthetics)** - A chat application powered by Gemini Flash 1.5, featuring terminal-inspired aesthetics and AI-generated responses with smooth animations.  
+2. **[TerminalAesthetics](https://github.com/vxncius-dev/terminalaesthetics)** - A chat application powered by Gemini Flash 1.5, featuring terminal-inspired aesthetics and AI-generated responses with smooth animations.
