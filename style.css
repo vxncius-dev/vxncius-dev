@@ -1,73 +1,188 @@
-    html {
-        color-scheme: dark;
-        background: black;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Outfit:wght@100..900&display=swap');
+
+html {
+    color-scheme: dark;
+    background: #16171b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    user-select: none;
+    background: none;
+    outline: none;
+    border: none;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+*:not(h1 *) {
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    margin-inline: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+@media (min-width: 800px) {
+    body {
+        max-width: 800px;
+    }
+}
+
+nav {
+    ul {
+        display: flex;
+        justify-content: right;
+        gap: 15px;
+    }
+
+    li {
+        gap: 10px;
+        font-size: 1.2em;
+
+        i {
+            font-size: 22px !important;
+            margin-top: -15px !important;
+        }
+    }
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    :first-child {
+        font-family: "Nanum Pen Script", cursive;
+        margin-bottom: -15px;
+        margin-left: 10%;
+    }
+
+    h1 {
+        font-size: 2em;
+        color: #fe0137;
+        z-index: -1;
+    }
+
+    :last-child {
+        font-family: "Nanum Pen Script", cursive;
+        align-self: end;
+        margin-top: -10px;
+        margin-right: 10%;
+    }
+}
+
+.homepage #title {
+    margin: 30px auto;
+
+    * {
+        font-size: xx-large;
+    }
+
+    :first-child {
+        margin-bottom: -30px;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    :last-child {
+        margin-top: -25px;
+    }
+}
+
+header:not(.homepage) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    nav ul {
+        display: flex;
+        width: fit-content;
+    }
+}
+
+h2 {
+    margin-block: 20px 6px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+section,
+.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .project {
+        border: 1px solid #333;
+        padding: 20px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        overflow: hidden;
 
         * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            list-style: none;
-            color: white;
-            user-select: none;
-            text-transform: lowercase;
-            background: none;
-            outline: none;
-            border: none;
+            cursor: pointer;
         }
 
-        *:not(h1 *) {
-            font-family: "Times", serif;
+        img {
+            border-radius: 20px;
+            object-fit: cover;
+        }
+    }
+
+    h3 {
+        position: relative;
+        padding-left: 8px;
+    }
+
+    @media (min-width: 400px) {
+        h3::before {
+            content: "› ";
+            opacity: 0;
+            transform: translateX(-10000%);
+            position: absolute;
+            transition: transform .2s;
         }
 
-        body {
-            max-width: 600px;
-            margin-inline: auto;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
+        .project:hover {
+            border: 1px solid #666;
 
-            h1 {
-                pre {
-                    font-size: 10px;
-                    color: #df2531;
-                }
-
-                img {
-                    height: 80px;
-                    object-fit: cover;
-                    mix-blend-mode: hard-light;
-                    margin-left: -18px;
-                }
-            }
-
-            h2 {
-                margin-block: 20px 6px;
-            }
-
-            a:hover {
-                opacity: 0.7;
-            }
-
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 7px;
-            }
-
-            section {
-                display: flex;
-                flex-direction: column;
-                padding-left: 25px;
-                gap: 15px;
-                max-width: 95%;
-
-                h3 {
-                    margin-bottom: 4px;
-                    cursor: pointer;
-                    font-size: 20px;
-                }
+            h3::before {
+                opacity: 1;
+                color: inherit;
+                transform: translateX(-10px);
             }
         }
     }
+}
+
+h3 {
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+blockquote {
+    padding-left: 10px;
+    border-left: 8px solid #282828;
+}
+
+footer {
+    height: 60px;
+}
