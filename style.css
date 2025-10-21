@@ -1,9 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Outfit:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Nanum Pen Script';
+    src: url('assets/fonts/Nanum_Pen_Script/NanumPenScript-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/Outfit/static/Outfit-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/Outfit/static/Outfit-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 
 html {
-    color-scheme: dark;
-    background: #16171b;
+    color-scheme: light;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
+
+::-webkit-scrollbar {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+}
+
 
 * {
     padding: 0;
@@ -11,31 +40,103 @@ html {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    color: white;
-    user-select: none;
+    color: #171717;
     background: none;
     outline: none;
     border: none;
     font-optical-sizing: auto;
+    font-family: "Outfit", sans-serif;
     font-style: normal;
 }
 
-*:not(h1 *) {
-    font-family: "Outfit", sans-serif;
+::selection {
+    background: #212121;
 }
 
 body {
+    min-width: 400px;
     margin-inline: auto;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
+    overflow-y: scroll;
     gap: 7px;
+    scroll-snap-type: y mandatory;
 }
 
-@media (min-width: 800px) {
-    body {
-        max-width: 800px;
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px;
+}
+
+.homepage section {
+    scroll-snap-align: center;
+}
+
+.container {
+    justify-content: center;
+    align-items: start;
+
+    #title {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin-bottom: -13px;
+
+        * {
+            font-size: xx-large;
+        }
+
+        :first-child {
+            font-family: "Nanum Pen Script", cursive;
+            margin-left: 6%;
+            margin-bottom: -8%;
+            font-size: clamp(30px, 2vw, 4em);
+            animation: fadeIn .5s ease-in-out forwards;
+        }
+
+        h1 {
+            color: #fe0137;
+            z-index: -1;
+            font-size: clamp(60px, 2vw, 7em);
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        :last-child {
+            font-family: "Nanum Pen Script", cursive;
+            align-self: end;
+            margin-right: -40px;
+            margin-top: -8%;
+            font-size: clamp(30px, 2vw, 4em);
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
     }
+
+    .local {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .info {
+        max-width: 500px;
+        animation: fadeIn 2.5s ease-in-out forwards;
+    }
+
+    nav {
+        animation: fadeIn 3s ease-in-out forwards;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px 0;
 }
 
 nav {
@@ -43,89 +144,18 @@ nav {
         display: flex;
         justify-content: right;
         gap: 15px;
-    }
 
-    li {
-        gap: 10px;
-        font-size: 1.2em;
-
-        i {
-            font-size: 22px !important;
-            margin-top: -15px !important;
+        li {
+            gap: 10px;
+            font-size: 1.2em;
         }
     }
 }
 
-#title {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-
-    :first-child {
-        font-family: "Nanum Pen Script", cursive;
-        margin-bottom: -15px;
-        margin-left: 10%;
-    }
-
-    h1 {
-        font-size: 2em;
-        color: #fe0137;
-        z-index: -1;
-    }
-
-    :last-child {
-        font-family: "Nanum Pen Script", cursive;
-        align-self: end;
-        margin-top: -10px;
-        margin-right: 10%;
-    }
-}
-
-.homepage #title {
-    margin: 30px auto;
-
-    * {
-        font-size: xx-large;
-    }
-
-    :first-child {
-        margin-bottom: -30px;
-    }
-
-    h1 {
-        font-size: 5em;
-    }
-
-    :last-child {
-        margin-top: -25px;
-    }
-}
-
-header:not(.homepage) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    nav ul {
-        display: flex;
-        width: fit-content;
-    }
-}
-
-h2 {
-    margin-block: 20px 6px;
-}
-
-ul {
+.projects {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
-}
-
-section,
-.about-me {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
 
     .project {
@@ -133,6 +163,8 @@ section,
         padding: 20px;
         border-radius: 16px;
         display: flex;
+        width: 100%;
+        height: fit-content;
         justify-content: space-between;
         gap: 15px;
         overflow: hidden;
@@ -144,31 +176,7 @@ section,
         img {
             border-radius: 20px;
             object-fit: cover;
-        }
-    }
-
-    h3 {
-        position: relative;
-        padding-left: 8px;
-    }
-
-    @media (min-width: 400px) {
-        h3::before {
-            content: "› ";
-            opacity: 0;
-            transform: translateX(-10000%);
-            position: absolute;
-            transition: transform .2s;
-        }
-
-        .project:hover {
-            border: 1px solid #666;
-
-            h3::before {
-                opacity: 1;
-                color: inherit;
-                transform: translateX(-10px);
-            }
+            max-height: 100px;
         }
     }
 }
@@ -178,11 +186,79 @@ h3 {
     font-size: 20px;
 }
 
-blockquote {
-    padding-left: 10px;
-    border-left: 8px solid #282828;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-footer {
-    height: 60px;
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 720px) {
+    body {
+        max-width: 800px;
+
+        .homepage {
+            padding-left: 40px;
+        }
+
+        .projects {
+            h3 {
+                position: relative;
+                padding-left: 8px;
+            }
+
+            h3::before {
+                content: "› ";
+                opacity: 0;
+                transform: translateX(-10000%);
+                position: absolute;
+                transition: transform .2s;
+            }
+
+            .project:hover {
+                border: 1px solid #666;
+
+                h3::before {
+                    opacity: 1;
+                    color: inherit;
+                    transform: translateX(-10px);
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: black;
+    }
+
+    ::-webkit-scrollbar {
+        background: black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #212121;
+    }
+
+    * {
+        color: #e0e0e0;
+    }
+
+    .icon {
+        filter: invert(1);
+    }
 }
