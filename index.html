@@ -3,110 +3,255 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vinícius — Full-stack developer specialized in Python, Flutter, and web technologies. Explore my portfolio and projects.">
+    <meta name="keywords"
+        content="Vinícius, Developer, Portfolio, Python, Flutter, AI, Web Developer, Full Stack, Mobile Apps">
+    <meta name="author" content="Vinícius">
+    <meta property="og:title" content="Vxncius — Full-stack Developer">
+    <meta property="og:description"
+        content="Building fast, elegant, and intentional experiences. Explore my projects and work.">
+    <meta property="og:image" content="assets/icons/icon.png">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://vxncius.dev/">
     <link rel="shortcut icon" href="assets/icons/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
-    <meta name="msapplication-navbutton-color" content="#000000">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Vxncius</title>
+    <title>Vxncius — Full-stack Developer</title>
 </head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDX543KKBB"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RY9ML04NXR"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-GDX543KKBB');
+    gtag('config', 'G-RY9ML04NXR');
 </script>
 
 <body class="homepage">
-    <section class="container">
+    <section class="container internal">
         <span id="title">
             <p>hey, I'm</p>
             <h1>VINICIUS</h1>
             <p>and this is my portfolio</p>
         </span>
         <nav class="local">
-            <img src="assets/icons/location.svg" alt="location" width="20" class="icon">
+            <img src="assets/icons/location.svg" alt="Location icon" width="20" class="icon" loading="lazy">
             <p>Brazil</p>
         </nav>
         <p class="info">
-            <b>Full-stack developer</b> focused on building fast, elegant, and intentional
-            experiences.<br>
+            <b>Full-stack developer</b> focused on building fast, elegant, and intentional experiences.<br>
             I create backends and automations in <b>Python</b>, craft mobile apps with <b>Flutter</b>, and shape
             modern
-            web interfaces by hand.
-            <br>Currently <b>studying Informatics</b> at UFRR, exploring <b>AI</b>, <b>design</b>, and new ways to
+            web interfaces by hand.<br>
+            Currently <b>studying Informatics</b> at UFRR, exploring <b>AI</b>, <b>design</b>, and new ways to
             connect
             creativity with technology.
         </p>
         <nav>
-            <ul>
-                <li>
-                    <a href="https://github.com/vxncius-dev" target="_blank">
-                        <img src="assets/icons/github.svg" alt="GitHub" width="28" class="icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@vxncius_" target="_blank">
-                        <img src="assets/icons/tiktok.svg" alt="TikTok" width="28" class="icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://codepen.io/vxncius" target="_blank">
-                        <img src="assets/icons/codepen.svg" alt="CodePen" width="28" class="icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://medium.com/@vxncius" target="_blank">
-                        <img src="assets/icons/medium.svg" alt="Medium" width="28" class="icon">
-                    </a>
-                </li>
+            <ul class="social">
+                <li><a href="https://github.com/vxncius-dev" target="_blank"><img src="assets/icons/github.svg"
+                            alt="GitHub" width="28" class="icon" loading="lazy"></a></li>
+                <li><a href="https://www.tiktok.com/@vxncius_" target="_blank"><img src="assets/icons/tiktok.svg"
+                            alt="TikTok" width="28" class="icon" loading="lazy"></a></li>
+                <li><a href="https://codepen.io/vxncius" target="_blank"><img src="assets/icons/codepen.svg"
+                            alt="CodePen" width="28" class="icon" loading="lazy"></a></li>
+                <li><a href="https://medium.com/@vxncius" target="_blank"><img src="assets/icons/medium.svg"
+                            alt="Medium" width="28" class="icon" loading="lazy"></a></li>
             </ul>
         </nav>
     </section>
+
     <section class="projects">
-        <h2>My Projects</h2>
-        <a href="/article/" class="project">
-            <article>
-                <h3>Article</h3>
-                <p>Generate academic papers automatically using customizable templates and AI assistance.</p>
-            </article>
-        </a>
+        <div class="internal">
+            <h2 id="projectsTitle">My Projects</h2>
+            <p>
+                Aqui vão alguns dos meus projetos mais recentes, misturando full-stack, mobile e automações com IA. Cada
+                um é open-source no GitHub – clica pra ver o código e demos!
+            </p>
 
-        <a href="/snapdl/" class="project">
-            <article>
-                <h3>SnapDL</h3>
-                <p>A fast, lightweight downloader supporting multiple formats and platforms. Fully open source.</p>
-            </article>
-        </a>
+            <div class="project-grid">
+                <a href="/article/" class="project">
+                    <img src="https://source.unsplash.com/400x200/?ai,document" alt="Screenshot do Article"
+                        loading="lazy">
+                    <article>
+                        <h3>Article</h3>
+                        <p>Uma ferramenta poderosa pra gerar papers acadêmicos automaticamente, usando templates
+                            customizáveis e assistência de IA. Ideal pra pesquisadores que querem agilizar o workflow
+                            sem perder qualidade.</p>
+                        <ul>
+                            <li>Python + OpenAI</li>
+                            <li>Export PDF/Word</li>
+                            <li>Custom templates</li>
+                            <li>100% open-source</li>
+                        </ul>
+                        <div class="links">
+                            <a href="/article/">Live Demo</a>
+                            <a href="https://github.com/vxncius-dev/article" class="gh-link" target="_blank">GitHub</a>
+                        </div>
+                    </article>
+                </a>
 
-        <a href="/skimmo/" class="project">
-            <article>
-                <h3>Skimmo</h3>
-                <p>A minimal mobile framework that compiles Android apps quickly and efficiently.</p>
-            </article>
-        </a>
+                <a href="/snapdl/" class="project">
+                    <img src="https://source.unsplash.com/400x200/?download,app" alt="Screenshot do SnapDL"
+                        loading="lazy">
+                    <article>
+                        <h3>SnapDL</h3>
+                        <p>Um downloader rápido e leve que suporta múltiplos formatos (vídeo, áudio, imagem) e
+                            plataformas como YouTube, Instagram e TikTok. Focado em performance e privacidade, sem ads
+                            ou trackers.</p>
+                        <ul>
+                            <li>Python + yt-dlp</li>
+                            <li>Multi-plataforma</li>
+                            <li>CLI + GUI simples</li>
+                            <li>Atualizações automáticas</li>
+                        </ul>
+                        <div class="links">
+                            <a href="/snapdl/">Live Demo</a>
+                            <a href="https://github.com/vxncius-dev/snapdl" class="gh-link" target="_blank">GitHub</a>
+                        </div>
+                    </article>
+                </a>
 
-        <a href="/stocklist/" class="project">
-            <article>
-                <h3>Stocklist</h3>
-                <p>Track expenses and groceries in one smart app with notifications and sharing features.</p>
-            </article>
-        </a>
+                <a href="/skimmo/" class="project">
+                    <img src="https://source.unsplash.com/400x200/?mobile,framework" alt="Screenshot do Skimmo"
+                        loading="lazy">
+                    <article>
+                        <h3>Skimmo</h3>
+                        <p>Um framework mobile minimalista pra compilar apps Android de forma rápida e eficiente, com
+                            foco em devs indie que querem protótipos sem boilerplate pesado.</p>
+                        <ul>
+                            <li>Flutter + Dart</li>
+                            <li>Build em <1min</li>
+                            <li>Hot reload otimizado</li>
+                            <li>Suporte a plugins nativos</li>
+                        </ul>
+                        <div class="links">
+                            <a href="/skimmo/">Live Demo</a>
+                            <a href="https://github.com/vxncius-dev/skimmo" class="gh-link" target="_blank">GitHub</a>
+                        </div>
+                    </article>
+                </a>
 
-        <a href="/playcine/" class="project">
-            <article>
-                <h3>Playcine</h3>
-                <p>Stream live TV and access a wide range of channels anywhere, with low latency and smooth
-                    playback.
-                </p>
-            </article>
-        </a>
+                <a href="/stocklist/" class="project">
+                    <img src="https://source.unsplash.com/400x200/?shopping,list" alt="Screenshot do Stocklist"
+                        loading="lazy">
+                    <article>
+                        <h3>Stocklist</h3>
+                        <p>App inteligente pra rastrear despesas e listas de compras, com notificações push,
+                            compartilhamento em tempo real e integração com calendário. Perfeito pra gerenciar o
+                            orçamento diário.</p>
+                        <ul>
+                            <li>Flutter + Firebase</li>
+                            <li>Notificações locais</li>
+                            <li>Share via QR/link</li>
+                            <li>Relatórios semanais</li>
+                        </ul>
+                        <div class="links">
+                            <a href="/stocklist/">Live Demo</a>
+                            <a href="https://github.com/vxncius-dev/stocklist" class="gh-link"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="/playcine/" class="project">
+                    <img src="https://source.unsplash.com/400x200/?tv,stream" alt="Screenshot do Playcine"
+                        loading="lazy">
+                    <article>
+                        <h3>Playcine</h3>
+                        <p>Player de streaming pra TV ao vivo e canais variados, com baixa latência, suporte a
+                            chromecast e playlists personalizadas. Acessível de qualquer lugar, sem assinaturas chatas.
+                        </p>
+                        <ul>
+                            <li>Flutter + HLS</li>
+                            <li>Low-latency playback</li>
+                            <li>Multi-device sync</li>
+                            <li>Offline cache</li>
+                        </ul>
+                        <div class="links">
+                            <a href="/playcine/">Live Demo</a>
+                            <a href="https://github.com/vxncius-dev/playcine" class="gh-link" target="_blank">GitHub</a>
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+            <!-- Bônus: Adicionei um "mais projetos" pra encher e linkar pro GitHub full -->
+            <di>
+                <h3>Gostou? Tem mais!</h3>
+                <p>Confere todos os meus repos no GitHub, incluindo experimentos com IA como Spectral (gerador de
+                    imagens) e Codeblock (notes app).</p>
+                <a href="https://github.com/vxncius-dev?tab=repositories" target="_blank"
+                    style="display: inline-block; padding: 0.75rem 1.5rem; background: #24292e; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">Ver
+                    Todos no GitHub</a>
+            </div>
+        </div>
     </section>
-</body>
+    <footer>
+        <section class="internal">
+            <h3>Let's connect</h3>
+            <p>Get in touch or follow me on social media.</p>
+            <form class="newsletter" onsubmit="return false;">
+                <input type="email" placeholder="Your email" aria-label="Email address">
+                <button type="submit">Send</button>
+            </form>
 
-<script src="main.js"></script>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#projectsTitle">Projects</a>
+                <a href="mailto:contact@vxncius.dev">Contact</a>
+            </div>
+
+            <p class="copyright">
+                © <span id="year"></span> Vinícius. All rights reserved.
+            </p>
+        </section>
+    </footer>
+
+    <script>
+        let snapRemovido = false;
+
+        function removerSnapHero() {
+            if (snapRemovido) return;
+
+            const sections = document.querySelectorAll('section');
+            const passou100vh = window.scrollY >= window.innerHeight;
+
+            console.log('Checando scroll: scrollY =', window.scrollY, 'innerHeight =', window.innerHeight, 'passou100vh =', passou100vh);
+
+            if (passou100vh) {
+                sections.forEach(section => {
+                    if (section) {
+                        section.style.scrollSnapAlign = 'none';
+                    }
+                });
+                snapRemovido = true;
+                window.removeEventListener('scroll', handleScroll);
+                console.log('Snap removido após 100vh!');
+            }
+        }
+
+        let ticking = false;
+        function handleScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    removerSnapHero();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Página carregada, snap inicial ativo.');
+            removerSnapHero();
+        });
+        document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+</body>
 
 </html>
