@@ -18,6 +18,7 @@
     <link rel="canonical" href="https://vxncius.dev/">
     <link rel="shortcut icon" href="assets/icons/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <title>Vxncius — Full-stack Developer</title>
 </head>
 
@@ -65,132 +66,143 @@
 
     <section class="projects">
         <div class="internal">
-            <h2 id="projectsTitle">My Projects</h2>
+            <h2>My Projects</h2>
             <p>
-                Aqui vão alguns dos meus projetos mais recentes, misturando full-stack, mobile e automações com IA. Cada
-                um é open-source no GitHub – clica pra ver o código e demos!
+                Here are some of my most recent projects, mixing full-stack, mobile, and AI automations.
+                Every project is open-source on GitHub – click to view the code and demos.
             </p>
-
             <div class="project-grid">
                 <a href="/article/" class="project">
-                    <img src="https://source.unsplash.com/400x200/?ai,document" alt="Screenshot do Article"
-                        loading="lazy">
-                    <article>
+                    <span class="article-window">
+                        <span class="buttons">
+                            <span class="button-window type1"></span>
+                            <span class="button-window type2"></span>
+                            <span class="button-window type3"></span>
+                        </span>
+                        <img src="assets/article-logo.png" alt="Article" width="60" loading="lazy">
+                        <p>Successfully completed.<br>Word document generated at: ...</p>
+                    </span>
+                    <span class="article-content">
                         <h3>Article</h3>
-                        <p>Uma ferramenta poderosa pra gerar papers acadêmicos automaticamente, usando templates
-                            customizáveis e assistência de IA. Ideal pra pesquisadores que querem agilizar o workflow
-                            sem perder qualidade.</p>
-                        <ul>
-                            <li>Python + OpenAI</li>
-                            <li>Export PDF/Word</li>
-                            <li>Custom templates</li>
-                            <li>100% open-source</li>
-                        </ul>
-                        <div class="links">
-                            <a href="/article/">Live Demo</a>
-                            <a href="https://github.com/vxncius-dev/article" class="gh-link" target="_blank">GitHub</a>
-                        </div>
-                    </article>
+                        <p>A powerful tool to automatically generate academic papers using customizable templates and AI
+                            assistance. Perfect for researchers who want faster workflow without losing quality.</p>
+                        <span class="stack">
+                            <span>
+                                <img src="assets/icons/python.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>Python</p>
+                            </span>
+                            <span>
+                                <img src="assets/icons/gemini.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>Gemini 2.5</p>
+                            </span>
+                        </span>
+                    </span>
                 </a>
 
                 <a href="/snapdl/" class="project">
-                    <img src="https://source.unsplash.com/400x200/?download,app" alt="Screenshot do SnapDL"
-                        loading="lazy">
-                    <article>
+                    <img src="https://i.pinimg.com/1200x/d9/7f/83/d97f83370baff66a4f512016ef5bfadf.jpg"
+                        alt="SnapDL Screenshot" loading="lazy">
+                    <span class="article-content">
                         <h3>SnapDL</h3>
-                        <p>Um downloader rápido e leve que suporta múltiplos formatos (vídeo, áudio, imagem) e
-                            plataformas como YouTube, Instagram e TikTok. Focado em performance e privacidade, sem ads
-                            ou trackers.</p>
-                        <ul>
-                            <li>Python + yt-dlp</li>
-                            <li>Multi-plataforma</li>
-                            <li>CLI + GUI simples</li>
-                            <li>Atualizações automáticas</li>
-                        </ul>
-                        <div class="links">
-                            <a href="/snapdl/">Live Demo</a>
-                            <a href="https://github.com/vxncius-dev/snapdl" class="gh-link" target="_blank">GitHub</a>
-                        </div>
-                    </article>
+                        <p>A fast and lightweight downloader supporting multiple formats (video, audio, image) and
+                            platforms such as YouTube, Instagram, and TikTok. Focused on performance and privacy, with
+                            no ads or tracking.</p>
+                        <span class="stack">
+                            <span>
+                                <img src="assets/icons/python.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>Python</p>
+                            </span>
+                            <span>
+                                <img src="assets/icons/yt-dlp.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>yt-dlp</p>
+                            </span>
+                            <span>
+                                <img src="assets/icons/ffmpeg.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>FFmpeg</p>
+                            </span>
+                        </span>
+                    </span>
                 </a>
 
                 <a href="/skimmo/" class="project">
-                    <img src="https://source.unsplash.com/400x200/?mobile,framework" alt="Screenshot do Skimmo"
-                        loading="lazy">
-                    <article>
+                    <img src="https://i.pinimg.com/1200x/25/a4/58/25a458ad63b317b26b0b93625c9f440e.jpg"
+                        alt="Skimmo Screenshot" loading="lazy">
+                    <span class="article-content">
                         <h3>Skimmo</h3>
-                        <p>Um framework mobile minimalista pra compilar apps Android de forma rápida e eficiente, com
-                            foco em devs indie que querem protótipos sem boilerplate pesado.</p>
-                        <ul>
-                            <li>Flutter + Dart</li>
-                            <li>Build em <1min</li>
-                            <li>Hot reload otimizado</li>
-                            <li>Suporte a plugins nativos</li>
-                        </ul>
-                        <div class="links">
-                            <a href="/skimmo/">Live Demo</a>
-                            <a href="https://github.com/vxncius-dev/skimmo" class="gh-link" target="_blank">GitHub</a>
-                        </div>
-                    </article>
+                        <p>A minimalist mobile framework to build Android apps quickly and efficiently, focused on indie
+                            devs who want prototypes without heavy boilerplate.</p>
+                        <span class="stack">
+                            <span>
+                                <img src="assets/icons/nodejs.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>Node.JS</p>
+                            </span>
+                            <span>
+                                <img src="assets/icons/electronjs.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>Electron.JS</p>
+                            </span>
+                        </span>
+                    </span>
                 </a>
 
                 <a href="/stocklist/" class="project">
-                    <img src="https://source.unsplash.com/400x200/?shopping,list" alt="Screenshot do Stocklist"
-                        loading="lazy">
-                    <article>
+                    <img src="https://i.pinimg.com/736x/54/7f/4c/547f4c80a76909adf8235ad1873a2e0b.jpg"
+                        alt="Stocklist Screenshot" loading="lazy">
+                    <span class="article-content">
                         <h3>Stocklist</h3>
-                        <p>App inteligente pra rastrear despesas e listas de compras, com notificações push,
-                            compartilhamento em tempo real e integração com calendário. Perfeito pra gerenciar o
-                            orçamento diário.</p>
-                        <ul>
-                            <li>Flutter + Firebase</li>
-                            <li>Notificações locais</li>
-                            <li>Share via QR/link</li>
-                            <li>Relatórios semanais</li>
-                        </ul>
-                        <div class="links">
-                            <a href="/stocklist/">Live Demo</a>
-                            <a href="https://github.com/vxncius-dev/stocklist" class="gh-link"
-                                target="_blank">GitHub</a>
-                        </div>
-                    </article>
+                        <p>Smart app for tracking expenses and shopping lists with push notifications, real-time
+                            sharing, and calendar integration. Perfect for daily budget management.</p>
+                        <span class="stack">
+                            <span>
+                                <img src="assets/icons/flutter.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>Flutter</p>
+                            </span>
+                            <span>
+                                <img src="assets/icons/firebase.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>Firebase</p>
+                            </span>
+                        </span>
+                    </span>
                 </a>
 
                 <a href="/playcine/" class="project">
-                    <img src="https://source.unsplash.com/400x200/?tv,stream" alt="Screenshot do Playcine"
-                        loading="lazy">
-                    <article>
+                    <img src="https://i.pinimg.com/1200x/90/d6/16/90d616365c29d7cad0949d26ee585060.jpg"
+                        alt="Playcine Screenshot" loading="lazy">
+                    <span class="article-content">
                         <h3>Playcine</h3>
-                        <p>Player de streaming pra TV ao vivo e canais variados, com baixa latência, suporte a
-                            chromecast e playlists personalizadas. Acessível de qualquer lugar, sem assinaturas chatas.
-                        </p>
-                        <ul>
-                            <li>Flutter + HLS</li>
-                            <li>Low-latency playback</li>
-                            <li>Multi-device sync</li>
-                            <li>Offline cache</li>
-                        </ul>
-                        <div class="links">
-                            <a href="/playcine/">Live Demo</a>
-                            <a href="https://github.com/vxncius-dev/playcine" class="gh-link" target="_blank">GitHub</a>
-                        </div>
-                    </article>
+                        <p>Streaming player for live TV and multiple channels, with low latency, Chromecast support, and
+                            custom playlists. Accessible from anywhere, no annoying subscriptions.</p>
+                        <span class="stack">
+                            <span>
+                                <img src="assets/icons/kotlin.svg" alt="GitHub" width="10" class="icon-stack"
+                                    loading="lazy">
+                                <p>Kotlin Compose</p>
+                            </span>
+                        </span>
+                    </span>
                 </a>
+
             </div>
 
-            <!-- Bônus: Adicionei um "mais projetos" pra encher e linkar pro GitHub full -->
-            <di>
-                <h3>Gostou? Tem mais!</h3>
-                <p>Confere todos os meus repos no GitHub, incluindo experimentos com IA como Spectral (gerador de
-                    imagens) e Codeblock (notes app).</p>
-                <a href="https://github.com/vxncius-dev?tab=repositories" target="_blank"
-                    style="display: inline-block; padding: 0.75rem 1.5rem; background: #24292e; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">Ver
-                    Todos no GitHub</a>
+            <div class="more-content">
+                <h3>Like it? There's more.</h3>
+                <p>Check all my GitHub repositories, including AI experiments like Spectral (image generator) and
+                    Codeblock (notes app).</p>
+                <a href="https://github.com/vxncius-dev?tab=repositories" target="_blank">View All on GitHub</a>
             </div>
         </div>
     </section>
+
     <footer>
-        <section class="internal">
+        <section class="footer-content">
             <h3>Let's connect</h3>
             <p>Get in touch or follow me on social media.</p>
             <form class="newsletter" onsubmit="return false;">
@@ -211,45 +223,19 @@
     </footer>
 
     <script>
-        let snapRemovido = false;
+        const sections = document.querySelectorAll("section");
 
-        function removerSnapHero() {
-            if (snapRemovido) return;
-
-            const sections = document.querySelectorAll('section');
+        function updateSnap() {
             const passou100vh = window.scrollY >= window.innerHeight;
 
-            console.log('Checando scroll: scrollY =', window.scrollY, 'innerHeight =', window.innerHeight, 'passou100vh =', passou100vh);
-
-            if (passou100vh) {
-                sections.forEach(section => {
-                    if (section) {
-                        section.style.scrollSnapAlign = 'none';
-                    }
-                });
-                snapRemovido = true;
-                window.removeEventListener('scroll', handleScroll);
-                console.log('Snap removido após 100vh!');
-            }
+            sections.forEach(section => {
+                section.style.scrollSnapAlign = passou100vh ? "none" : "start";
+            });
         }
 
-        let ticking = false;
-        function handleScroll() {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    removerSnapHero();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        }
+        window.addEventListener("scroll", updateSnap, { passive: true });
+        document.addEventListener("DOMContentLoaded", updateSnap);
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('Página carregada, snap inicial ativo.');
-            removerSnapHero();
-        });
         document.querySelector("#year").textContent = new Date().getFullYear();
     </script>
 </body>
