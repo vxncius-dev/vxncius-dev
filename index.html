@@ -19,6 +19,7 @@
     <link rel="shortcut icon" href="assets/icons/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Vxncius — Full-stack Developer</title>
 </head>
 
@@ -28,6 +29,8 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-RY9ML04NXR');
+    (() => emailjs.init("FuN20QU2gVCdZfFNY"))();
+
 </script>
 
 <body class="homepage">
@@ -42,13 +45,11 @@
             <p>Brazil</p>
         </nav>
         <p class="info">
-            <b>Full-stack developer</b> focused on building fast, elegant, and intentional experiences.<br>
-            I create backends and automations in <b>Python</b>, craft mobile apps with <b>Flutter</b>, and shape
-            modern
-            web interfaces by hand.<br>
-            Currently <b>studying Informatics</b> at UFRR, exploring <b>AI</b>, <b>design</b>, and new ways to
-            connect
-            creativity with technology.
+            I’m a <b>full-stack</b> developer who loves turning complex problems into elegant, efficient solutions.
+            From <b>Python</b> automations to <b>Flutter</b> apps and hand-coded web interfaces, I care about detail
+            and
+            performance
+            in every project.
         </p>
         <nav>
             <ul class="social">
@@ -62,6 +63,7 @@
                             alt="Medium" width="28" class="icon" loading="lazy"></a></li>
             </ul>
         </nav>
+        <button id="scrollForProjectsSection">see my work</button>
     </section>
 
     <section class="projects">
@@ -90,12 +92,12 @@
                             <span>
                                 <img src="assets/icons/python.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>Python</p>
+                                <small>Python</small>
                             </span>
                             <span>
                                 <img src="assets/icons/gemini.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>Gemini 2.5</p>
+                                <small>Gemini 2.5</small>
                             </span>
                         </span>
                     </span>
@@ -113,17 +115,17 @@
                             <span>
                                 <img src="assets/icons/python.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>Python</p>
+                                <small>Python</small>
                             </span>
                             <span>
                                 <img src="assets/icons/yt-dlp.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>yt-dlp</p>
+                                <small>yt-dlp</small>
                             </span>
                             <span>
                                 <img src="assets/icons/ffmpeg.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>FFmpeg</p>
+                                <small>FFmpeg</small>
                             </span>
                         </span>
                     </span>
@@ -140,12 +142,12 @@
                             <span>
                                 <img src="assets/icons/nodejs.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>Node.JS</p>
+                                <small>Node.JS</small>
                             </span>
                             <span>
                                 <img src="assets/icons/electronjs.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>Electron.JS</p>
+                                <small>Electron.JS</small>
                             </span>
                         </span>
                     </span>
@@ -162,12 +164,12 @@
                             <span>
                                 <img src="assets/icons/flutter.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>Flutter</p>
+                                <small>Flutter</small>
                             </span>
                             <span>
                                 <img src="assets/icons/firebase.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>Firebase</p>
+                                <small>Firebase</small>
                             </span>
                         </span>
                     </span>
@@ -184,14 +186,13 @@
                             <span>
                                 <img src="assets/icons/kotlin.svg" alt="GitHub" width="10" class="icon-stack"
                                     loading="lazy">
-                                <p>Kotlin Compose</p>
+                                <small>Kotlin Compose</small>
                             </span>
                         </span>
                     </span>
                 </a>
 
             </div>
-
             <div class="more-content">
                 <h3>Like it? There's more.</h3>
                 <p>Check all my GitHub repositories, including AI experiments like Spectral (image generator) and
@@ -205,15 +206,17 @@
         <section class="footer-content">
             <h3>Let's connect</h3>
             <p>Get in touch or follow me on social media.</p>
-            <form class="newsletter" onsubmit="return false;">
-                <input type="email" placeholder="Your email" aria-label="Email address">
-                <button type="submit">Send</button>
+            <form id="contactForm" class="contact-form">
+                <input type="text" id="nickname" name="nickname" style="display:none;" autocomplete="off">
+                <input type="email" id="email" name="email" placeholder="Your email" required
+                    aria-label="Email address">
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                <button type="submit" id="sendMessage" disabled>Send</button>
             </form>
-
             <div class="footer-links">
                 <a href="#">Home</a>
                 <a href="#projectsTitle">Projects</a>
-                <a href="mailto:contact@vxncius.dev">Contact</a>
+                <a href="mailto:vxncius@gmail.com">Contact</a>
             </div>
 
             <p class="copyright">
@@ -223,11 +226,71 @@
     </footer>
 
     <script>
-        const sections = document.querySelectorAll("section");
+        const form = document.getElementById("contactForm");
+        const honeypot = document.getElementById("nickname");
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
+        const sendBtn = document.getElementById("sendMessage");
 
+        emailInput.addEventListener("input", () => {
+            const emailHasValue = emailInput.value.trim().length > 0;
+            emailHasValue
+                ? form.classList.add("force-visible")
+                : form.classList.remove("force-visible");
+        });
+
+        emailInput.addEventListener("blur", () => {
+            if (!emailInput.value.trim()) {
+                messageInput.classList.remove("force-visible");
+            }
+        });
+
+        messageInput.addEventListener("input", () => {
+            const minChars = 30;
+            const hasEnoughText = messageInput.value.trim().length >= minChars;
+            sendBtn.disabled = !hasEnoughText;
+        });
+
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            if (honeypot.value) return;
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            if (!email || !message) {
+                alert("Please fill in both fields.");
+                return;
+            }
+            const LIMIT_HOURS = 1;
+            const lastSent = localStorage.getItem("lastEmailSent");
+            if (lastSent && Date.now() - lastSent < LIMIT_HOURS * 60 * 60 * 1000) {
+                alert("Please wait a bit before sending another message.");
+                return;
+            }
+            try {
+                await emailjs.send("Contact Me", "template_6298j57", {
+                    email,
+                    message,
+                });
+                alert("Message sent successfully!");
+                localStorage.setItem("lastEmailSent", Date.now());
+                form.reset();
+            } catch (error) {
+                console.error("EmailJS error:", error);
+                alert("Something went wrong. Try again later.");
+            }
+        });
+
+        document.getElementById("scrollForProjectsSection").addEventListener("click", () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+        });
+
+        const sections = document.querySelectorAll("section");
         function updateSnap() {
             const passou100vh = window.scrollY >= window.innerHeight;
-
             sections.forEach(section => {
                 section.style.scrollSnapAlign = passou100vh ? "none" : "start";
             });
@@ -235,7 +298,6 @@
 
         window.addEventListener("scroll", updateSnap, { passive: true });
         document.addEventListener("DOMContentLoaded", updateSnap);
-
         document.querySelector("#year").textContent = new Date().getFullYear();
     </script>
 </body>
