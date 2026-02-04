@@ -1,39 +1,48 @@
-# Vinicius - Full Stack Developer  
+# Vinícius — Full Stack Developer
 
-Welcome to my GitHub! I'm a full stack developer focused on building scalable and high-performance solutions. Always exploring new technologies to improve my skill set.  
+Full stack developer focused on performance, clean architecture, and product-driven UI/UX decisions.
 
-## Technologies and Tools  
+## Core Stack
 
-### Frontend  
-- HTML, CSS, JavaScript, TypeScript, jQuery  
-- Tailwind, Bootstrap, Sass  
-- React, Next.js, Vue.js  
-- Three.js (3D graphics)  
-- Figma, Photoshop (UI/UX)  
+### Frontend
+- JavaScript / TypeScript
+- HTML, CSS, Sass
+- React, Next.js, Vue.js
+- Tailwind, Bootstrap
+- UI/UX: Figma
 
-### Mobile Development  
-- React Native, Flutter, Kotlin, NativeScript, Expo, Lynx, Ionic
+### Mobile
+- Kotlin (Android)
+- Flutter
+- React Native
 
-### Database & SQL
-- SQL, MySQL, PostgreSQL, SQLite
-- Dart (for database-related tasks in Flutter apps)
+### Backend
+- Node.js
+- Python
+- PHP
+- Currently learning: Java, Go
 
-### Backend  
-- PHP, Python, Node.js  
-- Learning: Java, Go  
+### Databases
+- PostgreSQL, MySQL, SQLite
+- SQL-first mindset
 
-### Tools and Scripting  
-- Bash, PowerShell  
-- R (Data Science)
+### Tooling & Systems
+- Bash, PowerShell
+- Git, CI/CD basics
+- Linux-based workflows
 
-### Hardware & IoT  
-- Arduino (Microcontrollers, Sensors, Automation)
+## UI / UX & Product Sense
+- UI/UX fundamentals applied directly to development
+- Design-to-code workflows (Figma → production)
+- Accessibility, layout consistency, and visual hierarchy
 
-### Exploring  
-- Rust, C++, Ruby
+## Productivity & AI
+- Heavy use of AI-assisted workflows to accelerate development
+- Rapid prototyping, debugging, and refactoring with AI tools
+- Focus on reducing iteration time without sacrificing code quality
 
-## Featured Projects  
-
-1. **[AudioVision](https://github.com/vxncius-dev/audiovision)** - A web application that helps individuals with hearing impairments by transcribing and analyzing audio files, converting them into text and visual waveforms.  
-
-2. **[TerminalAesthetics](https://github.com/vxncius-dev/terminalaesthetics)** - A chat application powered by Gemini Flash 1.5, featuring terminal-inspired aesthetics and AI-generated responses with smooth animations.
+## Interests & Focus
+- Performance-oriented applications
+- Offline-first and privacy-focused apps
+- Clean architecture and maintainable code
+- Practical solutions over overengineering
