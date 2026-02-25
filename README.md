@@ -1,48 +1,35 @@
-# Vinícius — Full Stack Developer
+```bash
+$ whoami
+vinicius oliveira aka Vxncius
 
-Full stack developer focused on performance, clean architecture, and product-driven UI/UX decisions.
+$ echo $ROLE
+full-stack developer
 
-## Core Stack
+$ stack --list
+frontend     js ts react next vue html css sass tailwind
+mobile       kotlin flutter react-native expo
+backend      node python php java go
+database     postgresql mysql sqlite mongodb
+cloud/auth   firebase auth jwt oauth
+systems      linux bash git ci/cd docker
+security     cybersecurity fundamentals auth flows api hardening
+design       figma photoshop
 
-### Frontend
-- JavaScript / TypeScript
-- HTML, CSS, Sass
-- React, Next.js, Vue.js
-- Tailwind, Bootstrap
-- UI/UX: Figma
+$ mindset --print
+performance-first clean-architecture
+product-driven no-overengineering
+offline-first privacy-aware
+sql-first ai-assisted ship > perfect
 
-### Mobile
-- Kotlin (Android)
-- Flutter
-- React Native
+$ workflow
+prototype -> validate -> refactor -> optimize -> deploy
 
-### Backend
-- Node.js
-- Python
-- PHP
-- Currently learning: Java, Go
+$ current_status
+building scalable systems
 
-### Databases
-- PostgreSQL, MySQL, SQLite
-- SQL-first mindset
+$ uname -a
+linux mindset 24/7
 
-### Tooling & Systems
-- Bash, PowerShell
-- Git, CI/CD basics
-- Linux-based workflows
-
-## UI / UX & Product Sense
-- UI/UX fundamentals applied directly to development
-- Design-to-code workflows (Figma → production)
-- Accessibility, layout consistency, and visual hierarchy
-
-## Productivity & AI
-- Heavy use of AI-assisted workflows to accelerate development
-- Rapid prototyping, debugging, and refactoring with AI tools
-- Focus on reducing iteration time without sacrificing code quality
-
-## Interests & Focus
-- Performance-oriented applications
-- Offline-first and privacy-focused apps
-- Clean architecture and maintainable code
-- Practical solutions over overengineering
+$ echo $PHILOSOPHY
+code fast. think sharp. ship real things.
+```
