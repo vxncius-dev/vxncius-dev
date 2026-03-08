@@ -27,9 +27,6 @@ prototype -> validate -> refactor -> optimize -> deploy
 $ current_status
 building scalable systems
 
-$ uname -a
-linux mindset 24/7
-
 $ echo $PHILOSOPHY
 code fast. think sharp. ship real things.
 ```
