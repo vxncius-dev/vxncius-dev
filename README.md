@@ -1,6 +1,6 @@
-```bash
+<pre>
 $ whoami
-vinicius oliveira aka Vxncius
+vinicius oliveira aka <a href="https://vxncius.com/">Vxncius</a>
 
 $ echo $ROLE
 full-stack developer
@@ -29,4 +29,4 @@ building scalable systems
 
 $ echo $PHILOSOPHY
 code fast. think sharp. ship real things.
-```
+</pre>
