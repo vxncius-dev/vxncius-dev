@@ -3,29 +3,27 @@ $ whoami
 vinicius oliveira aka <a href="https://vxncius.com/">Vxncius</a>
 
 $ echo $ROLE
-full-stack developer
+software engineer
 
-$ stack --list
-frontend     js ts react next vue html css sass tailwind
-mobile       kotlin flutter react-native expo
-backend      node python php java go
-database     postgresql mysql sqlite mongodb
-cloud/auth   firebase auth jwt oauth
-systems      linux bash git ci/cd docker
-security     cybersecurity fundamentals auth flows api hardening
-design       figma photoshop
+$ domains --list
+backend      node python go java
+mobile       kotlin flutter
+security     encryption auth keystore sqlcipher api-hardening
+systems      linux bash docker ci/cd
+automation   scripting pipelines tooling
+games        gameplay systems engine logic
 
 $ mindset --print
 performance-first clean-architecture
-product-driven no-overengineering
 offline-first privacy-aware
-sql-first ai-assisted ship > perfect
+low-level control when needed
+ship fast without losing structure
 
 $ workflow
-prototype -> validate -> refactor -> optimize -> deploy
+build -> break -> refine -> optimize -> ship
 
 $ current_status
-building scalable systems
+designing and shipping real systems
 
 $ echo $PHILOSOPHY
 code fast. think sharp. ship real things.
